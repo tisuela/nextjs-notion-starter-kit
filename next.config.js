@@ -18,5 +18,23 @@ module.exports = withBundleAnalyzer({
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  }
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/missions-donate',
+        destination: 'https://renewalsv.churchcenter.com/giving/to/nathaniel-louis-tisuela-sunnyvale-vbs-2024',
+        permanent: true,
+      },
+      {
+        source: '/missions-subscribe',
+        destination: 'https://forms.gle/NZvm9Cbooz3NWkqe7',
+        permanent: true,
+      },
+    ]
+  },
 })
+
+
+
